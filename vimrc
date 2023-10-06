@@ -79,16 +79,21 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-set textwidth=88
+" Set line length before automatically wrapping text. 0 means no auto-wrapping
+set textwidth=0
 
 " autosave
 set autowrite autowriteall
+
+" new vertical splits open on the right
+set splitright
 
 " PLUGINS ---------------------------------------------------------------- {{{
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 
